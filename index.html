@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+    <title>JavaScript Quiz</title>
+</head>
+<body>
+    <header>
+        <div class="high-scores">
+            <a type="button" onclick="showHighScores()">View High Scores</a>
+        </div>
+        <div class="timer">Timer</div>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="quiz-directions">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            </div>
+            <div class="button">
+            <button class="start-button" type="button">Start Quiz!</button>
+            </div>
+
+            <div class="quiz-question">
+                <h2>Question?</h2>
+                <ul>
+                    <li><button class="quiz-button" id="A" type="button">A</button></li>
+                    <li><button class="quiz-button" id="B" type="button">B</button></li>
+                    <li><button class="quiz-button" id="C" type="button">C</button></li>
+                    <li><button class="quiz-button" id="D" type="button">D</button></li>
+                </ul>
+                <div class="right-wrong"></div>
+            </div>
+
+            <div class="final-score">
+                <h2>All Done!</h2>
+                <div class="final-score-results"></div>
+                <form class="user-initials">
+                    <label for="initials">Enter initials:</label>
+                    <input type="text" id="initials">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="high-scores-list">
+                <h2>High Scores:</h2>
+                <p class="high-score-names">High scores here.</p>
+                <div class="high-score-buttons">
+                    <button class="go-back" type="button">Go back</button>
+                    <button class="Clear-high-scores" type="button">Clear high scores</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="./assets/js/script.js"></script>    
+</body>
+</html>
