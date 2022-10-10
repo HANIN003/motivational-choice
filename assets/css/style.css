@@ -1,0 +1,208 @@
+/* Universal styling */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+p {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.high-scores {
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: rgb(218, 111, 236);
+}
+
+.timer {
+    float: right;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+
+/*First page explaining the quiz and start button */
+.quiz-directions {
+    align-items: center;
+    text-align: center;
+}
+
+.quiz-directions h1 {
+    font-size: 40px; 
+    padding-top: 100px;
+    padding-bottom: 30px; 
+}
+
+.button {
+    text-align: center;
+}
+
+.start-button {
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(58, 10, 86);
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 12px 0px 12px;
+}
+
+.start-button:hover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);      backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.start-button:hover, .start-button:focus, .start-button:active {
+    cursor: pointer;
+    background-color: rgb(224, 35, 221);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Question pages */
+.quiz-question {
+    align-items: center;
+    text-align: center;
+}
+
+.quiz-question h2 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 100px;
+    padding-bottom: 15px;
+}
+
+.quiz-question li {
+    list-style-type: none;
+}
+
+.quiz-button {
+    text-align: center;
+    background-color: rgb(58, 10, 86);
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 12px 0px 12px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+}
+
+.quiz-button:hover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);      backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.quiz-button:hover, .quiz-button:focus, .quiz-button:active {
+    cursor: pointer;
+    background-color: rgb(224, 35, 221);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.right-wrong {
+    font-style: italic;
+    font-size: 30px;
+    color: gray;
+}
+
+/* Final score page */
+.final-score h2 {
+    font-size: 40px;
+    padding-top: 100px;
+    font-weight: bold;
+}
+
+.user-initials {
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+.final-score-results {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.clear-high-scores {
+    text-align: center;
+    background-color: rgb(58, 10, 86);
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 12px 0px 12px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+}
+
+.clear-high-scores:hover, .clear-high-scores:focus, .clear-high-scores:active {
+    cursor: pointer;
+    background-color: rgb(224, 35, 221);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* High scores page */
+.high-scores-list h2 {
+    padding-top: 100px;
+    font-weight: bold;
+}
+
+.high-score-names {
+    font-size: 25px;
+    background-color: rgb(192, 114, 236);
+}
+
+.go-back {
+    text-align: center;
+    background-color: rgb(58, 10, 86);
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 12px 0px 12px;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+}
+
+.clear-high-scores {
+    text-align: center;
+    background-color: rgb(58, 10, 86);
+    color: #fff;
+    font-size: 25px;
+    padding: 0px 12px 0px 12px;
+    border-radius: 25px;
+    width: 250px;
+    height: 50px;
+}
+
+.go-back:hover, .go-back:focus, .go-back:active {
+    cursor: pointer;
+    background-color: rgb(224, 35, 221);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.clear-high-scores:hover, .clear-high-scores:focus, .clear-high-scores:active {
+    cursor: pointer;
+    background-color: rgb(224, 35, 221);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+
