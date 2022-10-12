@@ -1,52 +1,60 @@
 /* Universal styling */
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 body {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 }
 
-p {
-    padding: 15px;
-    font-size: 20px;
+main {
     text-align: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin-left:200px;
+    margin-right:200px;
 }
 
-.high-scores {
+#viewhighScores {
     float: left;
     padding-left: 20px;
     padding-top: 20px;
     color: rgb(218, 111, 236);
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.timer {
+#time {
     float: right;
     padding-right: 40px;
     padding-top: 20px;
+    font-size: 20px;
 }
 
 /*First page explaining the quiz and start button */
-.quiz-directions {
+#quizDirections {
     align-items: center;
     text-align: center;
 }
 
-.quiz-directions h1 {
+#quizDirections h1 {
     font-size: 40px; 
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 30px; 
 }
 
-.button {
-    text-align: center;
-}
-
-.start-button {
-    border-radius: 25px;
+#startButton {
+    border-radius: 10px;
     width: 150px;
     height: 50px;
     text-align: center;
@@ -56,7 +64,7 @@ p {
     padding: 0px 12px 0px 12px;
 }
 
-.start-button:hover {
+#startButton:hover {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -65,7 +73,7 @@ p {
     transition-property: box-shadow, transform;
 }
 
-.start-button:hover, .start-button:focus, .start-button:active {
+#startButton:hover {
     cursor: pointer;
     background-color: rgb(224, 35, 221);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
@@ -73,34 +81,45 @@ p {
 }
 
 /* Question pages */
-.quiz-question {
-    align-items: center;
-    text-align: center;
+.questionPage {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.quiz-question h2 {
-    font-size: 40px;
+#quizQuestion h1 {
+    font-size: 65px;
     font-weight: bold;
     padding-top: 100px;
     padding-bottom: 15px;
 }
 
-.quiz-question li {
+ul {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 50px;
 }
 
-.quiz-button {
-    text-align: center;
+li {
+    margin-bottom: 10px;
+}
+
+.choiceButton {
+    text-align: left;
     background-color: rgb(58, 10, 86);
     color: #fff;
     font-size: 25px;
     padding: 0px 12px 0px 12px;
-    border-radius: 25px;
-    width: 150px;
+    border-radius: 10px;
+    width: 400px;
     height: 50px;
 }
 
-.quiz-button:hover {
+.choiceButton:hover {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -109,49 +128,48 @@ p {
     transition-property: box-shadow, transform;
 }
 
-.quiz-button:hover, .quiz-button:focus, .quiz-button:active {
+.choiceButton:hover {
     cursor: pointer;
     background-color: rgb(224, 35, 221);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
 }
 
-.right-wrong {
+#rightWrong {
     font-style: italic;
     font-size: 30px;
     color: gray;
 }
 
 /* Final score page */
-.final-score h2 {
+.finalPage h2 {
     font-size: 40px;
     padding-top: 100px;
     font-weight: bold;
 }
 
-.user-initials {
-    font-weight: bold;
-    padding-top: 100px;
-}
-
-.final-score-results {
+#finalScore {
     padding: 20px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.clear-high-scores {
+.finalPage form {
+    font-size: 40px;
+}
+
+#submitButton {
     text-align: center;
     background-color: rgb(58, 10, 86);
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     padding: 0px 12px 0px 12px;
-    border-radius: 25px;
-    width: 150px;
-    height: 50px;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
 }
 
-.clear-high-scores:hover, .clear-high-scores:focus, .clear-high-scores:active {
+#submitButton:hover {
     cursor: pointer;
     background-color: rgb(224, 35, 221);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
@@ -159,50 +177,55 @@ p {
 }
 
 /* High scores page */
-.high-scores-list h2 {
+.highScores h2 {
     padding-top: 100px;
     font-weight: bold;
 }
 
-.high-score-names {
+.highScores p {
+    text-align: left;
     font-size: 25px;
     background-color: rgb(192, 114, 236);
 }
 
-.go-back {
+#goBack {
     text-align: center;
     background-color: rgb(58, 10, 86);
     color: #fff;
     font-size: 25px;
     padding: 0px 12px 0px 12px;
-    border-radius: 25px;
-    width: 150px;
-    height: 50px;
+    border-radius: 10px;
+    width: 125px;
+    height: 35px;
 }
 
-.clear-high-scores {
+#clearButton {
     text-align: center;
     background-color: rgb(58, 10, 86);
     color: #fff;
     font-size: 25px;
     padding: 0px 12px 0px 12px;
-    border-radius: 25px;
+    border-radius: 10px;
     width: 250px;
-    height: 50px;
+    height: 35px;
 }
 
-.go-back:hover, .go-back:focus, .go-back:active {
+#goBack:hover {
     cursor: pointer;
     background-color: rgb(224, 35, 221);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
 }
 
-.clear-high-scores:hover, .clear-high-scores:focus, .clear-high-scores:active {
+#clearButton:hover {
     cursor: pointer;
     background-color: rgb(224, 35, 221);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
 }
 
+/* Hides question page, final score page and high scores page */
+.questionPage, .finalPage, .highScores, #rightWrong {
+    display: none;
+}
 

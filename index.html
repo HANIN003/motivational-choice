@@ -4,62 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
     <title>JavaScript Quiz</title>
 </head>
 <body>
     <header>
-        <div class="high-scores">
-            <a type="button" onclick="showHighScores()">View High Scores</a>
+        <div class="header">
+            <div>
+            <a type="button" id="viewhighScores" href="#">View High Scores</a>
+            </div>
+            <div>
+                <p id="time">Time: 60</p>
+            </div>
         </div>
-        <div class="timer">Timer:</div>
     </header>
 
-    <main class="container">
-        <section>
-            <div class="quiz-directions">
-                <h1>Coding Quiz Challenge</h1>
-                <p>Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            </div>
-            <div class="button">
-            <button class="start-button" type="button">Start Quiz!</button>
-            </div>
+    <main>
+        <div>
+            <section class="startPage" id="startPage">
+                <div id="quizDirections">
+                    <h1>Coding Quiz Challenge</h1>
+                    <p>Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                    <button class="startButton" id="startButton">Start Quiz!</button>
+                </div>
+            </section>
+        </div>
 
-            <div class="quiz-question">
-                <h2>Question?</h2>
+        <section class="questionPage" id="questionPage">
+            <div>
+                <div>
+                <h1 id="quizQuestion">Question here</h1>
                 <ul>
-                    <li><button class="quiz-button" id="A" type="button">A</button></li>
-                    <li><button class="quiz-button" id="B" type="button">B</button></li>
-                    <li><button class="quiz-button" id="C" type="button">C</button></li>
-                    <li><button class="quiz-button" id="D" type="button">D</button></li>
+                    <li><button class="choiceButton" id="choice1" type="button" value="1">1</button></li>
+                    <li><button class="choiceButton" id="choice2" type="button" value="2">2</button></li>
+                    <li><button class="choiceButton" id="choice3" type="button" value="3">3</button></li>
+                    <li><button class="choiceButton" id="choice4" type="button" value="4">4</button></li>
                 </ul>
-                <div class="right-wrong"></div>
+                </div>
+                <hr id="lineBreak" style="display: none;">
+                <div>
+                    <p  id="rightWrong">Correct! or Wrong!</p>
+                </div>
             </div>
+        </section>
 
-            <div class="final-score">
-                <h2>All Done!</h2>
-                <div class="final-score-results"></div>
-                <form class="user-initials">
-                    <label for="initials">Enter initials:</label>
+        <section class="finalPage" id="finalPage">
+            <div>
+                <h2 id="allDone">All Done!</h2>
+                <p id="finalScore">Your final is:</p>
+                <form>Enter initials:
                     <input type="text" id="initials">
-                    <input type="submit" value="Submit" id="submit">
+                    <button class="button" id="submitButton">Submit</button>
                 </form>
             </div>
+        </section>
 
-            <div class="high-scores-list">
+        <section class="highScores" id="highScores">
+            <div>
                 <h2>High Scores:</h2>
-                <p class="high-score-names">High scores here.</p>
-                <ul id="score-list">List high scores</ul>
-                    <div class="high-score-buttons">
-                        <button class="go-back" type="button">Go back</button>
-                        <button class="clear-high-scores" type="button">Clear high scores</button>
+                    <div id="scoreList">
+                    </div>
+                    <div>
+                        <button class="button" id="goBack">Go back</button>
+                        <button class="button" id="clearButton">Clear high scores</button>
                     </div>
             </div>
         </section>
     </main>
-
-
 
 
     <script src="./assets/js/script.js"></script>    
